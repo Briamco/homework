@@ -1,0 +1,10 @@
+<main>
+  <h1>{{title}}</h1>
+  <ul>
+    @for (profile of profiles(); track $index) {
+      <li>{{ $index }}: Name: {{ profile.name }} {{ profile.lastName }}, Age: {{ profile.age }}</li>
+    } @empty {
+      <p>No profiles found.</p>
+    }
+  </ul>
+</main>
